@@ -1,21 +1,18 @@
 # Python Data Cleaning Script
 
-> Reusable **Pandas** pipeline for fast data cleaning: trim strings, coerce types, drop duplicates, standardize column names, and derive bands (e.g., **Age Group**, **Tenure Group**).
+Reusable **Pandas** pipeline for fast data cleaning: standardize column names, trim strings, handle nulls, drop duplicates, coerce numeric types, and derive **Age** / **Tenure** bands.
 
-## Why
-- Gets messy CSVs into analysis shape in minutes.
-- Opinionated, readable, and easy to extend.
+---
 
 ## Quickstart
-```bash
-# 1) create a virtual env (optional)
-python -m venv .venv && . .venv/Scripts/activate  # on Windows
-# . .venv/bin/activate                              # on macOS/Linux
 
-# 2) install
+```bash
+# (optional) create and activate a virtual env
+python -m venv .venv && . .venv/Scripts/activate   # Windows
+# . .venv/bin/activate                              # macOS / Linux
+
+# install dependencies
 pip install -r requirements.txt
 
-# 3) run
-python src/clean.py --input data/raw/sample.csv --output data/processed/clean.csv
-# data-cleaning-python
-Reusable Pandas pipeline for cleaning tabular data (trim, types, dedupe, banding).
+# run the cleaner (writes a clean CSV)
+python src/clean.py --input data/raw/sample.csv --output data/processed/clean.csv --int-cols age,years_at_company
