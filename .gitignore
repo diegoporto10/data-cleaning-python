@@ -1,0 +1,10 @@
+# Virtual env
+.venv/
+# Bytecode & caches
+__pycache__/
+*.pyc
+# Outputs
+data/processed/
+# OS cruft
+.DS_Store
+Thumbs.db
